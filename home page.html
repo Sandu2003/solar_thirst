@@ -3,64 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Thirst</title>
-    <link rel="stylesheet" href="styles hp.css">
+    <title>Industrial Solar Solutions</title>
+    <link rel="stylesheet" href="styles hp.css"> <!-- Link to your CSS file -->
 </head>
 <body>
 
+<!-- Header Section with Logo and Navigation -->
 <header>
-    <div class="logo">
-        <img src="Solar-Thirst-Logo.png" alt="Solar Thirst Logo" class="logo-img">
+    <div class="header-container">
+        <div class="logo">
+            <img src="Solar-Thirst-Logo.png" alt="Company Logo"> <!-- Add the path to your logo image -->
+        </div>
+        <nav>
+            <ul class="nav-menu"><b>
+                <li><a href="home page.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#">Calculator</a></li> <!-- Provide the correct link --></b>
+            </ul>
+        </nav>
     </div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li class="dropdown">
-                <a href="#services">Services</a>
-                <!-- Dropdown content -->
-                <ul class="dropdown-content">
-                    <li><a href="service-request.html">Service Request Form</a></li>
-                    <li><a href="consultation.html">Consultation</a></li>
-                    <li><a href="installation.html">Installation Services</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 </header>
 
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1>SOLAR THTRST</h1>
-        <p>Join us in creating a greener world through innovative solar energy solutions.</p>
-        <a href="#services" class="btn">Learn More</a>
-        <a href="login page.html" class="btn">sign in</a>
-    </div>
+<!-- Hero Section -->
+<section class="hero-content" id="home">
+    <h1>Join Us for a Greener Future!🍃⚡</h1>
+<p>Our team of experts specializes in solar panel installations. We help you reduce your carbon footprint and promote clean energy for a sustainable environment. Let’s work together to make the planet a better place!</p>  
+  <a href="#contact" class="btn">Contact Us</a>
+<a href="login page.html" class="btn">Sign in</a>
 </section>
 
-<section id="about" class="section-about">
-    <h2>About Us</h2>
-    <div class="about-content">
-        <p>Solar Thirst is committed to providing advanced solar technology to homes and businesses, helping them become more energy-efficient and environmentally friendly.</p>
-        <img src="11.jpg.png" alt="Solar Energy Solutions" class="about-img">
-    </div>
-</section>
-
-<section id="services" class="section-services">
-    <h2>Our Services</h2>
+<!-- Services Section -->
+<section class="services" id="services">
     <div class="service-card">
-        <h3>Solar Panel Installation</h3>
-        <p>Top-of-the-line solar panels that reduce energy costs and contribute to a cleaner environment.</p>
+        <img src="team.jpg" alt="Experienced Team">
+        <h3>Experienced Team</h3>
+        <p>Our team of experts ensures the best service with years of experience.</p>
     </div>
     <div class="service-card">
-        <h3>Energy Consulting</h3>
-        <p>Expert advice on how to maximize solar energy usage and minimize your carbon footprint.</p>
+        <img src="equipment.jpg" alt="Modern Equipment">
+        <h3>Modern Equipment</h3>
+        <p>We use cutting-edge technology for efficient and long-lasting solar solutions.</p>
+    </div>
+    <div class="service-card">
+        <img src="methods.jpg" alt="Smart Methods">
+        <h3>Smart Methods</h3>
+        <p>We implement the smartest and most cost-effective strategies to maximize your energy output.</p>
     </div>
 </section>
 
+<!-- Contact Form Section -->
+<section class="contact" id="contact">
+    <img src="Solar-Thirst-Logo.png" alt="Wind Turbine"> <!-- Path to your image -->
+    <form action="#">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email address" required>
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- Footer Section -->
 <footer>
-    <p>&copy; 2024 Solar Thirst. All rights reserved.</p>
+    <p>&copy; 2024 Industrial Solar Solutions. All rights reserved.</p>
 </footer>
 
 </body>
