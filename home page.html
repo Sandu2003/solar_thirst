@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industrial Solar Solutions</title>
-    <link rel="stylesheet" href="styles hp.css"> <!-- Link to your CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles hp.css"> 
 </head>
 <body>
 
@@ -12,7 +16,7 @@
 <header>
     <div class="header-container">
         <div class="logo">
-            <img src="Solar-Thirst-Logo.png" alt="Company Logo"> <!-- Add the path to your logo image -->
+            <img src="Solar-Thirst-Logo.png" alt="Company Logo"> 
         </div>
         <nav>
             <ul class="nav-menu"><b>
@@ -20,42 +24,59 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="About Us.html">About Us</a></li>
                 <li><a href="#contact">Contacts</a></li>
-                <li><a href="#">Calculator</a></li> <!-- Provide the correct link --></b>
+                <li><a href="#">Calculator</a></li> </b>
+                <li><a href="#" class="sign_btn">Sign In</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- Hero Section -->
+
+
 <section class="hero-content" id="home">
-    <h1>Join Us for a Greener Future!🍃⚡</h1>
-<p>Our team of experts specializes in solar panel installations. We help you reduce your carbon footprint and promote clean energy for a sustainable environment. Let’s work together to make the planet a better place!</p>  
-  <a href="#contact" class="btn">Contact Us</a>
-<a href="login page.html" class="btn">Sign in</a>
+
+<video autoplay loop muted plays-inline class="back-video">
+    <source src="assests/bg_video.mp4" type="video/mp4">
+</video>
+<div class="content">
+    <h1>Join Us for a Greener Future!</h1>
+    <p>Our team of experts specializes in solar panel installations. <br>We help you reduce your carbon footprint and promote clean energy for a sustainable environment. <br> Let’s work together to make the planet a better place!</p> 
+    <a href="#">Explore</a>
+</div>
+
 </section>
 
-<!-- Services Section -->
+
+
 <section class="services" id="services">
+    <h2 class="services-heading">Our Services</h2>
+    
     <div class="service-card">
         <img src="team.jpg" alt="Experienced Team">
         <h3>Experienced Team</h3>
         <p>Our team of experts ensures the best service with years of experience.</p>
+        <a href="#" class="learn-more">Learn More</a>
     </div>
     <div class="service-card">
         <img src="equipment.jpg" alt="Modern Equipment">
         <h3>Modern Equipment</h3>
         <p>We use cutting-edge technology for efficient and long-lasting solar solutions.</p>
+        <a href="#" class="learn-more">Learn More</a>
     </div>
     <div class="service-card">
         <img src="methods.jpg" alt="Smart Methods">
         <h3>Smart Methods</h3>
         <p>We implement the smartest and most cost-effective strategies to maximize your energy output.</p>
+        <a href="#" class="learn-more">Learn More</a>
     </div>
 </section>
 
-<!-- Contact Form Section -->
-<section class="contact" id="contact">
-    <img src="Solar-Thirst-Logo.png" alt="Wind Turbine"> <!-- Path to your image -->
+<br> <br> <br>
+<img src="trees.png" alt="" class="fot_img">
+
+
+ <section class="contact" id="contact">
+    <img src="Solar-Thirst-Logo.png" alt="Wind Turbine"> 
     <form action="#">
         <input type="text" name="name" placeholder="Enter your name" required>
         <input type="email" name="email" placeholder="Enter your email address" required>
@@ -64,10 +85,12 @@
     </form>
 </section>
 
-<!-- Footer Section -->
-<footer>
+ <footer>
     <p>&copy; 2024 Industrial Solar Solutions. All rights reserved.</p>
-</footer>
+</footer> 
+
+
+<script src="home.js"></script>
 
 </body>
 </html>
