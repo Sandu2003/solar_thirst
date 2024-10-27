@@ -3,11 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    
 }
 
 body {
-    background: url('/assests/n.jpg') no-repeat center center fixed;
+    background: url('/assests/eng.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -34,7 +33,7 @@ body {
 
 h2 {
     font-size: 24px;
-    color: white;
+    color: rgb(30, 8, 90);
     margin-bottom: 10px;
 }
 
@@ -89,15 +88,9 @@ h2 {
 
 .remember-forgot {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
     font-size: 12px;
-    color: white;
-}
-
-.or {
-    margin: 10px 0;
-    font-size: 14px;
     color: white;
 }
 
@@ -121,46 +114,4 @@ h2 {
 
 .social-btn:hover {
     opacity: 0.9;
-}
-
-.slider {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slide {
-    display: none;
-    position: relative;
-    transition: opacity 1s ease;
-}
-
-.slide.active {
-    display: block;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.slider-navigation .nav-btn {
-    margin-top: 10px;
-    margin-right: 10px;
 }
