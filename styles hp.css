@@ -321,14 +321,66 @@ nav ul li a:hover {
 
 .contact button:hover {
     background-color: #0ba038;
+    
 }
 
 
+
+/* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #004c7d;
+    color: #ffffff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 0.9rem;
     text-align: center;
-    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.social-icons {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #63f501;
+    transform: scale(1.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-icons {
+        margin-top: 10px;
+        position: static;
+    }
+    .social-icons a {
+        font-size: 1.1rem;
+    }
 }
 
 

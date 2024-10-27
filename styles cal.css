@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f5;
     color: #333;
@@ -10,16 +10,15 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    
 }
 
 .logo img {
     width: 150px; 
-}
+} */
 
-nav ul {
+/* nav ul {
     list-style: none;
     display: flex;
     gap: 20px; 
@@ -41,8 +40,62 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(24, 146, 48, 0.1); 
     color: #056312; 
+} */
+
+/* nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    position: relative; 
+    transition: color 0.3s ease;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0ba038;
+    transition: width 0.3s ease; 
+}
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+nav ul li a:hover {
+   
+    transform: scale(1.1);
+    color: #0ba038; 
+    
+   
+}
+
+.nav-hidden {
+    display: none; 
+}
+
+.sign_btn{
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    border: 2px solid #ffffff;
+    padding: 10px 40px;
+    border-radius: 50px;
+   
+}
 header {
     text-align: center;
     padding: 20px;
@@ -93,4 +146,238 @@ p#result {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+} */
+
+/* General page styling */
+* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Poppins", serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header container */
+/* .header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366;
+    padding: 10px 30px;
+} */
+
+/* header {
+    background-color: #ffffff76;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+} */
+
+
+header {
+    background-color: #a4a3d876;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.logo img {
+    width: 120px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    position: relative; 
+    transition: color 0.3s ease;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0ba038;
+    transition: width 0.3s ease; 
+}
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+nav ul li a:hover {
+   
+    transform: scale(1.1);
+    color: #0ba038; 
+    
+   
+}
+
+.nav-hidden {
+    display: none; 
+}
+
+.sign_btn{
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    border: 2px solid #ffffff;
+    padding: 10px 40px;
+    border-radius: 50px;
+   
+}
+
+/* Header section */
+.main_title {
+    color: #003366;
+    margin: 20px 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Calculator main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.calculator label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #003366;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.calculator input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.calculator input[type="number"]:focus {
+    border-color: #00509e;
+}
+
+.calculator button {
+    background-color: #ffcc00;
+    color: #003366;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+}
+
+.calculator button:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+}
+
+.calculator p#result {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #003366;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #003366;
+    padding: 15px 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: auto;  /* Pushes footer to bottom of the page */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }

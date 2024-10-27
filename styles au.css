@@ -1,19 +1,25 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     color: #333;
+    background-color: #f4f4f4;
     line-height: 1.6;
 }
 
-/* Header and Navigation */
-.header-container {
+
+/* .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,16 +28,16 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+} */
 
-.logo img {
-    width: 150px; /* Adjust logo size */
-}
-
+/* .logo img {
+    width: 150px; 
+} */
+/* 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Space between navigation items */
+    gap: 20px; 
 }
 
 nav ul li {
@@ -41,79 +47,190 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 15px;
-    color: rgb(24, 146, 48); /* Green color for the links */
+    color: rgb(24, 146, 48); 
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: rgba(24, 146, 48, 0.1); /* Light green background on hover */
-    color: #056312; /* Darker green color on hover */
+    background-color: rgba(24, 146, 48, 0.1); 
+    color: #056312; 
+} */
+
+/* header {
+    background-color: #ffffff76;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+} */
+.logo img {
+    width: 150px;
+    cursor: pointer; 
+    
 }
 
-/* Header Section */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    position: relative; 
+    transition: color 0.3s ease;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0ba038;
+    transition: width 0.3s ease; 
+}
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+nav ul li a:hover {
+   
+    transform: scale(1.1);
+    color: #0ba038; 
+    
+   
+}
+
+.nav-hidden {
+    display: none; 
+}
+
+.sign_btn{
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    border: 2px solid #ffffff;
+    padding: 10px 40px;
+    border-radius: 50px;
+   
+}
 header {
+    background-color: #a4a3d876;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+/* header {
     background-color: #006bb6;
     color: white;
     padding: 50px 20px;
     text-align: center;
+} */
+
+#about {
+    flex: 1;
+    padding: 60px 20px;
+    background-color: #ffffff;
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-}
-
-/* About Section */
-section#about {
-    background-color: white;
-    padding: 40px 20px;
+#about .container {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-section#about h2 {
+#about h2 {
+    font-size: 2.5rem;
+    color: #110555;
     margin-bottom: 20px;
-    font-size: 28px;
-    color: #006bb6;
+    position: relative;
 }
 
-section#about p {
-    font-size: 16px;
+#about h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #110555;
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555555;
     margin-bottom: 20px;
     line-height: 1.8;
-    color: #333;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #003366;
+    padding: 15px 0;
+    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    font-size: 0.9rem;
+    margin-top: auto;  /* Pushes footer to bottom of the page */
 }
 
 footer p {
     margin: 0;
-    font-size: 14px;
 }
 
-/* Responsive Design */
+/* Button Styling */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .header-container {
+        padding: 15px;
         flex-direction: column;
-        text-align: center;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    #about .container {
+        padding: 0 20px;
     }
 }
