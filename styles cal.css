@@ -357,7 +357,7 @@ footer {
     color: #ffffff;
     text-align: center;
     font-size: 0.9rem;
-    margin-top: auto;  /* Pushes footer to bottom of the page */
+    margin-top: auto;  
 }
 
 footer p {

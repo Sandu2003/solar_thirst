@@ -368,7 +368,7 @@ footer {
     transform: scale(1.25);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

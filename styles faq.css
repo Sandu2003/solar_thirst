@@ -144,7 +144,7 @@ nav ul li a:hover {
 }
 
 .faq-item.active p {
-    max-height: 500px; /* Adjust for longer paragraphs */
+    max-height: 500px; 
     opacity: 1;
 }
 
