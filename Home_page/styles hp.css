@@ -10,7 +10,7 @@
 }
 
 header {
-    background-color: #63d79976;;
+    background-color: #ffffff80;;
     color: rgb(255, 255, 255);
     padding: 20px 0;
     position: sticky;
@@ -128,7 +128,7 @@ nav ul li a:hover {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 .hero-content .Explore{
-    background-color: #a9eaa9;
+    background-color: #47cd1b;
 }
 .Vision-Mission {
     padding: 60px 20px;
@@ -350,7 +350,7 @@ nav ul li a:hover {
 
 /* Footer Styling */
 footer {
-    background-color: #004c7d;
+    background-color: #1bc7c5;
     color: #ffffff;
     padding: 20px;
     font-family: Arial, sans-serif;
