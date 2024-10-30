@@ -111,7 +111,7 @@ header {
     margin-bottom: 20px; 
 }
 .hero-content {
-    background-color: rgb(110, 221, 236);
+    background-color: rgba(110, 221, 236, 0.546);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -142,7 +142,7 @@ header {
 
 .hero-content p {
     font-size: 1.0rem;
-    font-weight:lighter;
+    font-weight:400;
     color: #ffffff;
     line-height: 1.5;
 }
@@ -152,14 +152,14 @@ header {
 }
 
 .technical-team {
-    background-color: #021365;
+    background-color: #0213659c;
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    height: 70vh; 
+    height: 3%; 
     padding: 20px; 
-    border-top-left-radius: 2000px;
+    border-top-left-radius:250px ;
 }
 .technical-team h1 {
     text-align: center;
@@ -175,7 +175,35 @@ header {
     height: auto; 
     margin-top: 20px; 
 }
+.Services {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 150vh; 
+    padding: 20px; 
+}
+.Services h2 {
+    color: #1bc7c5;
+    font-weight: 300;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
 
+.image-block {
+    text-align: center;
+}
+
+.caption {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #ffffff;
+    font-weight: 400;
+}
 /* Footer Styling */
 footer {
     background-color: #1bc7c5;
