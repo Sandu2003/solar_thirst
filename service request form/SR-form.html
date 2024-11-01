@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="SR-form.css">
+</head>
+<body>
+    <h2>Service Request Form</h2>
+    <form id="serviceRequestForm" action="/submit-request" method="POST" enctype="multipart/form-data">
+        <!-- Full Name (required) -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <br><br>
+
+        <!-- ID Card Copy (required) -->
+        <label for="idCard">Upload ID Card Copy:</label>
+        <input type="file" id="idCard" name="idCard" accept="image/*" required>
+        <br><br>
+
+        <!-- Payment Confirmation Receipt (conditionally required based on loan choice) -->
+        <label for="loanOption">Have you taken a loan for this service?</label>
+        <select id="loanOption" name="loanOption" required onchange="togglePaymentFields()">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+        <br><br>
+
+        <!-- Payment Confirmation Receipt (displayed only if 'No' is selected for loan) -->
+        <div id="paymentSection">
+            <label for="paymentReceipt">Upload Payment Confirmation Receipt:</label>
+            <input type="file" id="paymentReceipt" name="paymentReceipt" accept="image/*">
+            <br><br>
+        </div>
+
+        <!-- Loan Confirmation Receipt (displayed only if 'Yes' is selected for loan) -->
+        <div id="loanSection" style="display: none;">
+            <label for="loanReceipt">Upload Loan Confirmation Receipt:</label>
+            <input type="file" id="loanReceipt" name="loanReceipt" accept="image/*">
+            <br><br>
+        </div>
+
+        <!-- Chosen Plan (optional) -->
+        <label for="chosenPlan">Chosen Plan:</label>
+        <select id="chosenPlan" name="chosenPlan">
+            <option value="company_decide">Let the company decide the best plan</option>
+            <option value="custom">Enter your preferred plan</option>
+        </select>
+        <br><br>
+
+        <!-- Custom Plan Input (only appears if user selects "Enter your preferred plan") -->
+        <div id="customPlanSection" style="display: none;">
+            <label for="customPlanText">Enter Your Preferred Plan:</label>
+            <input type="text" id="customPlanText" name="customPlanText">
+            <br><br>
+        </div>
+
+        <!-- Latest Light Bill (required) -->
+        <label for="lightBill">Upload Latest Light Bill:</label>
+        <input type="file" id="lightBill" name="lightBill" accept="image/*" required>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <script>
+        // Show or hide payment or loan receipt based on loan selection
+        function togglePaymentFields() {
+            const loanOption = document.getElementById("loanOption").value;
+            const paymentSection = document.getElementById("paymentSection");
+            const loanSection = document.getElementById("loanSection");
+
+            if (loanOption === "yes") {
+                paymentSection.style.display = "none";
+                loanSection.style.display = "block";
+                document.getElementById("paymentReceipt").removeAttribute("required");
+                document.getElementById("loanReceipt").setAttribute("required", "required");
+            } else {
+                paymentSection.style.display = "block";
+                loanSection.style.display = "none";
+                document.getElementById("loanReceipt").removeAttribute("required");
+                document.getElementById("paymentReceipt").setAttribute("required", "required");
+            }
+        }
+
+        // Show or hide custom plan input based on chosen plan selection
+        document.getElementById("chosenPlan").addEventListener("change", function() {
+            const customPlanSection = document.getElementById("customPlanSection");
+            if (this.value === "custom") {
+                customPlanSection.style.display = "block";
+                document.getElementById("customPlanText").setAttribute("required", "required");
+            } else {
+                customPlanSection.style.display = "none";
+                document.getElementById("customPlanText").removeAttribute("required");
+            }
+        });
+    </script>
+</body>
+<br><br>
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Industrial Solar Solutions. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    
+</footer>
+</html>
