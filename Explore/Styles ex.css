@@ -97,7 +97,7 @@ nav ul li a:hover {
 
 
 .hero-content {
-    background-color: rgba(110, 221, 236, 0.546);
+    background-color: rgba(110, 227, 236, 0.546);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -115,7 +115,7 @@ nav ul li a:hover {
 .hero-content h1 {
     font-size: 5vw;
     font-weight: bold;
-    color: #58e073;
+    color: #15ad24;
     text-align: center;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
@@ -139,7 +139,7 @@ nav ul li a:hover {
 
 
 .technical-team {
-    background-color: #0213659c;
+    background-color: #1c830a88;
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -197,7 +197,6 @@ nav ul li a:hover {
     font-weight: 400;
 }
 
-/* Container styles */
 .container {
     display: flex;
     justify-content: center;
@@ -206,7 +205,6 @@ nav ul li a:hover {
 
 }
 
-/* Text container styles */
 .text-container {
     width: 300px;
     height: 450px;
@@ -222,7 +220,7 @@ nav ul li a:hover {
     animation: float 5s ease-in-out infinite;
 }
 
-/* Hover animation for scaling */
+
 .text-container:hover {
     transform: scale(1.05);
     box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.8);
@@ -230,7 +228,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* Float animation */
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -240,11 +238,18 @@ nav ul li a:hover {
     }
 }
 .support {
-
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 10vh; 
+    padding: 20px; 
 }
 .support h1 {
-    font-weight: 900;
-    color: #17cfc638;
+    color: #15ad24;
+}
+.support p {
+    color: #1bc7c5;
 }
 .banks {
     display: flex;              
@@ -257,7 +262,7 @@ nav ul li a:hover {
     height: auto; 
     display: block;   
 }
-/* Footer Styling */
+/* Footer*/
 footer {
     background-color: #1bc7c5;
     color: #ffffff;
