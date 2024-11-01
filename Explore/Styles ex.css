@@ -242,14 +242,16 @@ nav ul li a:hover {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    height: 10vh; 
     padding: 20px; 
+    text-align: center;
 }
 .support h1 {
     color: #15ad24;
+    font-weight: 900; 
 }
 .support p {
     color: #1bc7c5;
+    max-width: 600px; 
 }
 .banks {
     display: flex;              
@@ -261,6 +263,12 @@ nav ul li a:hover {
     width: 5%; 
     height: auto; 
     display: block;   
+}
+.equipments h1 {
+    font-weight: 900;
+}
+.equipments h2 {
+    font-weight: 600;
 }
 /* Footer*/
 footer {
