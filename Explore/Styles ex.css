@@ -185,9 +185,9 @@ nav ul li a:hover {
     text-align: center;
 }
 .image-block:hover {
-    image-shadow transform: scale(1.1)
+    /* image-shadow transform: scale(1.1)
     transform: scale(0.9);;
-    opacity: 0.9; 
+    opacity: 0.9;  */
     
 }
 .caption {
