@@ -22,8 +22,9 @@
                     <li><a href="../Home_page/home page.html#services">Services</a></li>
                     <li><a href="../Aboutus_page/About Us.html">About Us</a></li>
                     <li><a href="../Home_page/home page.html#contact">Contacts</a></li>
-                    <li><a href="caculator.html">Calculator</a></li> </b>
+                    <li><a href="../Calculator_page/caculator.html">Calculator</a></li> </b>
                     <li><a href="../Faq_page/FAQ.html">FAQ</a></li>
+                    <li><a href="../gallery/gallery.html">projects</a></li>
                     <li><a href="#" class="sign_btn">Sign In</a></li>
                 </ul>
             </nav>
@@ -33,22 +34,33 @@
     
     
         <h1 class="main_title">Units Calculator</h1>
+        <p class="Cal-introduction">Calculate how much solar energy you need! <br><br>
+            <b>Enter Your Monthly Energy Usage:</b> Input your household's total energy consumption in kilowatt-hours (kWh) for the month.
+            <br><b> kW Needed:</b> The calculator will generate the required kilowatts (kW) you need to produce from solar power to cover your usage. <br><br>
+            Ready to see how much solar power you can harness? Let’s get started!</p>
     
-    
-    <main>
-        <div class="calculator">
-            <label for="kwInput">Enter KW:</label>
-            <input type="number" id="kwInput" placeholder="Enter kilowatts" required>
-            <button id="calculateBtn">Calculate Units</button>
-            <p id="result"></p> 
-        </div>
-    </main>
+            <main>
+                <div class="calculator">
+                    <label for="unitsInput">Enter daily usage of units:</label>
+                    <input type="number" id="unitsInput" placeholder="Enter Units" required>
+                    <button id="calculateBtn">Calculate kWs</button>
+                    <p id="result"></p> 
+                </div>
+            </main>
+            
     
     <script src="scripts.js"></script> 
     <footer>
-        <div class="container">
-            <p>&copy; All Rights Reserved. Solar Thirst</p>
+        <div class="footer-container">
+            <p>&copy; 2024 Industrial Solar Solutions. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
+    
 </body>
 </html>

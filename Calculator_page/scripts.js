@@ -1,12 +1,11 @@
 document.getElementById('calculateBtn').addEventListener('click', function() {
-    const kwInput = document.getElementById('kwInput').value;
+    const unitsInput = document.getElementById('unitsInput').value;
     const resultElement = document.getElementById('result');
 
-  
-    if (kwInput && kwInput > 0) {
-        const units = kwInput * 110; 
-        resultElement.textContent = `Units: ${units}`;
+    if (unitsInput && unitsInput > 0) {
+        const kW = unitsInput / 110; 
+        resultElement.textContent = `kW: ${kW.toFixed(2)}`;
     } else {
-        resultElement.textContent = 'Please enter a valid KW value.';
+        resultElement.textContent = 'Please enter a valid unit value.';
     }
 });

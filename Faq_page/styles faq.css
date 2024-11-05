@@ -8,34 +8,11 @@
   
 }
 
-header {
-    background-color: #ffffff6c;
-    color: white;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
-}
-
 .logo img {
     width: 150px;
     cursor: pointer; 
     
 }
-
-
 
 
 nav ul {
@@ -92,6 +69,28 @@ nav ul li a:hover {
     border-radius: 50px;
    
 }
+header {
+    background-color:#ffffff56;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+
 
 .faq-container {
     background: #ffffff;
@@ -111,11 +110,11 @@ nav ul li a:hover {
     font-size: 2.5rem;
     text-align: center;
     margin-top: 30px;
-    color: #333333;
+    color: #003366;
 }
 /* FAQ Items */
 .faq-item {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 20px;
     border-radius: 8px;
     background-color: #e6f1f7;
@@ -150,7 +149,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #1bc7c5;
+    background-color: #295374;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;

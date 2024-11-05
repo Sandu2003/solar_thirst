@@ -15,7 +15,7 @@ body {
     margin: 0;
     color: #333;
     line-height: 1.6;
-    background-image: url(../assests/bg.jpg);
+
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -91,41 +91,38 @@ nav ul li a:hover {
     padding: 0 20px;
     
 }
-
-
-
-
-
 .hero-content {
-    background-color: rgba(110, 227, 236, 0.546);
+    background-color:#003366;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
     text-align: center;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     color: rgb(0, 0, 0);
     padding: 20px; 
     position: relative;
     border-bottom-left-radius: 2000px;
-    border-bottom-right-radius: px;
+    height: fit-content;
 }
 
 .hero-content h1 {
-    font-size: 5vw;
-    font-weight: bold;
-    color: #15ad24;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
     text-align: center;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    margin: 0;
+    position: relative;
+    
 }
-
-
-.hero-content h1:hover {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.991);
+.hero-content h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 10px auto 20px;
+    border-radius: 2px;
 }
-
 .hero-content p {
     font-size: 1.0rem;
     font-weight:400;
@@ -133,29 +130,23 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-.hero-content p:hover {
-    text-shadow: 2px 2px 4px #1bc7c5; /* horizontal offset, vertical offset, blur radius */
-}
-
-
 .technical-team {
-    background-color: #1c830a88;
-    display: flex; 
-    flex-direction: column; 
+    text-align: center;
     align-items: center; 
-    justify-content: center; 
-    height: 6%; 
-    padding: 20px; 
-    border-top-left-radius:250px ;
 }
+
 .technical-team h1 {
     text-align: center;
     font-weight: 900;
-    color: #ffffff;
+    color: #003366;
 }
 .technical-team p {
-    text-align: center;
-    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: left;
 }
 .team-image {
     max-width: 100%;
@@ -166,12 +157,11 @@ nav ul li a:hover {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center; 
-    height: 200vh; 
+    justify-content: center;  
     padding: 20px; 
 }
 .Services h2 {
-    color: #1bc7c5;
+    color: #35383a;
     font-weight: 300;
 }
 .container {
@@ -185,17 +175,20 @@ nav ul li a:hover {
     text-align: center;
 }
 .image-block:hover {
-    /* image-shadow transform: scale(1.1)
-    transform: scale(0.9);;
-    opacity: 0.9;  */
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.1); 
+    opacity: 0.9; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .caption {
     font-size: 16px;
     margin-top: 8px;
-    color: #ffffff;
-    font-weight: 400;
+    color: #003366;
+    font-weight: bold;
 }
+
+
 
 .container {
     display: flex;
@@ -210,12 +203,12 @@ nav ul li a:hover {
     height: 450px;
     padding: 10px;
     font-size: 16px;
-    text-align: justify;
+    text-align: left;
     border: 1px solid #e8e1e1;
-    box-shadow: 2px 2px 8px rgba(23, 183, 156, 0.614);
+    box-shadow: 2px 2px 8px #2e6394;
     border-radius: 5px;
     background-color: #fff;
-    font-weight: 500;
+    font-weight: 400;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     animation: float 5s ease-in-out infinite;
 }
@@ -224,8 +217,7 @@ nav ul li a:hover {
 .text-container:hover {
     transform: scale(1.05);
     box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.8);
-    background-color: #17cfc638;
-    color: #fff;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(0, 200, 255, 0.15));
 }
 
 
@@ -238,20 +230,22 @@ nav ul li a:hover {
     }
 }
 .support {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 20px; 
-    text-align: center;
+    padding: 20px;
 }
+
 .support h1 {
-    color: #15ad24;
-    font-weight: 900; 
+    text-align: center;
+    font-weight: 900;
+    color: #003366;
 }
+
 .support p {
-    color: #1bc7c5;
-    max-width: 600px; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: left;
 }
 .banks {
     display: flex;              
@@ -264,15 +258,72 @@ nav ul li a:hover {
     height: auto; 
     display: block;   
 }
-.equipments h1 {
+.Smart-methods {
+    padding: 20px;
+
+}
+
+.Smart-methods h1 {
+    text-align: center;
     font-weight: 900;
+    color: #003366;
+    margin-bottom: 15px;
 }
+.Smart-methods p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+}
+.equipments {
+
+    color: #333;
+}
+
+.equipments h1 {
+    text-align: center;
+    font-weight: 900;
+    color: #003366;
+}
+
+.equipments p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
 .equipments h2 {
-    font-weight: 600;
+    text-align: left;
+    font-weight: 900;
+    color: #218540;
 }
+.Solar-img{
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-items: right;
+}
+.solar-cap {
+    font-size: 1.1rem;
+    line-height: 1.6; 
+    color: #555;
+    margin: 20px auto; 
+    max-width: 800px; 
+    padding: 10px;
+    background-color: #ffffff5e;
+    border-left: 4px solid #218540;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer*/
 footer {
-    background-color: #1bc7c5;
+    background-color: #295374;
     color: #ffffff;
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -371,20 +422,15 @@ footer {
 
 }
 
-@media (min-aspect-ratio:16/9){
-    .back-video{
-        width: 100%;
-        height: auto;
+@media (max-width: 768px) {
+    .header-container {
+        padding: 15px;
+        flex-direction: column;
     }
 
-}
-
-@media (max-aspect-ratio:16/9){
-    .back-video{
-        width: auto;
-        height: 100%;
+    #about .container {
+        padding: 0 20px;
     }
-    
 }
 
 .fot_img{
@@ -398,4 +444,4 @@ footer {
 
 .fot_img img {
     width: 100%;
-}
+} 
