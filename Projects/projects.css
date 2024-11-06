@@ -17,12 +17,6 @@ header {
     z-index: 1000;
 }
 
-
-/* body {
-    background-color: #ffffff;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
 .logo img {
     width: 150px;
     cursor: pointer; 

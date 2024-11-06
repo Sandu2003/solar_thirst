@@ -99,7 +99,8 @@ header {
             text-align: center;
             color: #292c29;
             margin-bottom: 20px;
-            font-weight: 900;
+            font-weight: 500;
+            font-size: 2.2rem;
         }
 
         form {
@@ -124,7 +125,7 @@ header {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #cccccc;
+            border: 1px solid #0c830179;
             border-radius: 5px;
             transition: border-color 0.3s ease;
         }
@@ -137,7 +138,7 @@ header {
         }
 
         button {
-            background-color: #eebf82;
+            background-color: #01234a;
             color: #ffffff;
             padding: 10px 15px;
             border: none;
@@ -163,9 +164,43 @@ header {
                 padding: 15px;
             }
         }
-        /* Footer*/
+        .home {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #036807;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 150px;
+        }
+        
+        .home a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .home:hover {
+            background-color: #024d05;
+        }
+        
+        
+        .home a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .home:hover {
+            background-color: #032a5c;
+        }
+        
+       
 footer {
-    background-color: #1bc7c5;
+    background-color: #0e3e75;
     color: #ffffff;
     padding: 20px;
     font-family: Arial, sans-serif;
