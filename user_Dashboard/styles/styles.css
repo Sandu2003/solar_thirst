@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #005500; /* Green */
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar nav ul li a:hover {
+    color: #AD2327; /* Red */
+}
+
+/* Content */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+h2 {
+    color: #000000; /* Black */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #005500; /* Green */
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 16px;
+    color: #005500; /* Green */
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"], input[type="file"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #AD2327; /* Red */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9b1f23; /* Darker Red */
+}
+
+/* Success Message */
+#successMessage {
+    background-color: #005500; /* Green */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#successMessage p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Back to Home Button */
+.home a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.home {
+    background-color: #005500; /* Green */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.home a:hover {
+    color: #AD2327; /* Red */
+}

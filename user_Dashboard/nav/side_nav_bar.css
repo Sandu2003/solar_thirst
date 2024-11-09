@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <h2>Dashboard</h2>
+    <nav>
+        <ul>
+            <li><a href="service_request.html">Service Request</a></li>
+            <li><a href="view_quotation.html">View Quotation</a></li>
+            <li><a href="complaints.html">Submit a Complaint</a></li>
+            <li><a href="package_request.html">Upgrade/Downgrade Package</a></li>
+            <li><a href="process_flow.html">Process Flow</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
