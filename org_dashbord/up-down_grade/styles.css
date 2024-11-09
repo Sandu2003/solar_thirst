@@ -1,0 +1,161 @@
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(3, 74, 17);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.header-right p {
+    margin: 0;
+    color: rgb(3, 66, 45);
+    font-size: 0.9em;
+}
+
+/* Adjust dashboard container to compensate for fixed header */
+.dashboard-container {
+    display: flex;
+    margin-top: 70px; /* Same height as header to avoid overlap */
+}
+
+/* Sidebar styling remains the same */
+
+/* Main container */
+.dashboard-container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #254c6a;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: #218540;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 20px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #891c1f;
+}
+
+.content {
+    margin-left:300px ;
+}
+.content h2 {
+    color: #254c6a;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1em;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+/* Tables for Upgrade and Downgrade Requests */
+.request-table {
+    width: 900px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.request-table th,
+.request-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.request-table th {
+    background-color: #254c6a;
+    color: white;
+}
+
+.request-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+h3 {
+    color: #254c6a;
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .header-left .logo {
+        height: 30px;
+    }
+
+    .header-right p {
+        font-size: 14px;
+    }
+
+    .request-table th,
+    .request-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+}

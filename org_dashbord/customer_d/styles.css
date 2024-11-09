@@ -1,0 +1,50 @@
+/* Quotation Form Styling */
+.quotation-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.quotation-form label {
+    display: block;
+    font-weight: bold;
+    color: #254c6a;
+    margin-bottom: 8px;
+}
+
+.quotation-form input[type="text"],
+.quotation-form input[type="email"],
+.quotation-form input[type="number"],
+.quotation-form select,
+.quotation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #111827;
+}
+
+.quotation-form select,
+.quotation-form textarea {
+    resize: vertical;
+}
+
+.quotation-form .generate-btn {
+    display: inline-block;
+    background-color: #218540;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.quotation-form .generate-btn:hover {
+    background-color: #891c1f;
+}

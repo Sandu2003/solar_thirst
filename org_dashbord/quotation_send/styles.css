@@ -1,0 +1,171 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(3, 74, 17);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.header-right p {
+    margin: 0;
+    color: rgb(3, 66, 45);
+    font-size: 0.9em;
+}
+
+/* Adjust dashboard container to compensate for fixed header */
+.dashboard-container {
+    display: flex;
+    margin-top: 70px; /* Same height as header to avoid overlap */
+}
+
+/* Sidebar styling remains the same */
+
+/* Main container */
+.dashboard-container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #254c6a;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: #218540;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 20px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #891c1f;
+}
+
+/* Main content */
+.content {
+    margin-left: 300px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+.content h2 {
+    color: #111827;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #254c6a;
+    line-height: 1.6;
+}
+/* Quotation Form Styling */
+.quotation-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.quotation-form label {
+    display: block;
+    font-weight: bold;
+    color: #254c6a;
+    margin-bottom: 8px;
+}
+
+.quotation-form input[type="text"],
+.quotation-form input[type="email"],
+.quotation-form input[type="number"],
+.quotation-form select,
+.quotation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #111827;
+}
+
+.quotation-form select,
+.quotation-form textarea {
+    resize: vertical;
+}
+
+.quotation-form .send-btn {
+    display: inline-block;
+    background-color: #218540;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.quotation-form .send-btn:hover {
+    background-color: #891c1f;
+}
+/* Quotation Form Additional Fields */
+.quotation-form input[type="file"],
+.quotation-form textarea {
+    margin-bottom: 15px;
+}
+
+.quotation-form label {
+    color: #254c6a;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.quotation-form textarea#comments {
+    resize: vertical;
+}

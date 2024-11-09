@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Sidebar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #254c6a;
+    color: white;
+}
+
+.header-left .logo {
+    height: 40px;
+}
+
+.header-right p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #254c6a;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #218540;
+}
+
+/* Content Section */
+.dashboard-container {
+    display: flex;
+    margin-left: 250px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+/* Complaints Table */
+.complaints-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.complaints-table th,
+.complaints-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.complaints-table th {
+    background-color: #254c6a;
+    color: white;
+}
+
+.complaints-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.reply-btn {
+    background-color: #218540;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.reply-btn:hover {
+    background-color: #891c1f;
+}
+
+/* Reply Section */
+#reply-section {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+#reply-section label {
+    font-weight: bold;
+    color: #254c6a;
+    margin-bottom: 8px;
+}
+
+#reply-section input[type="text"],
+#reply-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #111827;
+}
+
+#reply-section textarea {
+    resize: vertical;
+}
+
+.reply-submit-btn {
+    display: inline-block;
+    background-color: #218540;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.reply-submit-btn:hover {
+    background-color: #891c1f;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .header-left .logo {
+        height: 30px;
+    }
+
+    .header-right p {
+        font-size: 14px;
+    }
+
+    .complaints-table th,
+    .complaints-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+}

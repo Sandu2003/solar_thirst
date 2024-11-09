@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Data</title>
+    <link rel="stylesheet" href="cu_data.css">
+</head>
+<header class="header">
+    <div class="header-left">
+        <img src="../pics/Solar-Thirst-Logo.png" alt="Organization Logo" class="logo">
+    </div>
+    <div class="header-right">
+        <p>Welcome, Admin</p>
+        <p>Account Details | Logout</p>
+    </div>
+</header>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Organization Dashboard</h2>
+            <ul>
+                <li><a href="customer-data.html">Customer Data</a></li>
+                <li><a href="quotations.html">Send Quotations</a></li>
+                <li><a href="complaints.html">Reply to Complaints</a></li>
+                <li><a href="upgrade-downgrade.html">Upgrade/Downgrade Requests</a></li>
+                <li><a href="process-flow.html">Edit Process Flow</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h2>Customer Data</h2>
+            <p>
+                This page provides an overview of all registered customers. Here, you can view customer details and access each customer's specific data files by clicking on the document links. Each document includes information uploaded by the customer, such as ID verification, payment receipts, selected plans, and more.
+            </p>
+
+            <!-- Analysis Table -->
+            <table class="customer-table">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Service Plan</th>
+                        <th>Link to Document</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>Standard Plan</td>
+                        <td><a href="sample.html" target="_blank">View Document</a></td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>jane.smith@example.com</td>
+                        <td>Premium Plan</td>
+                        <td><a href="sample.html" target="_blank">View Document</a></td>
+                    </tr>
+                    <!-- Additional rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
