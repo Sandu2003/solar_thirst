@@ -8,6 +8,15 @@
     <script src="Scripts.js"></script>
 </head>
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="../" alt="Company Logo"> <!-- Replace with your logo path -->
+        </div>
+        <div class="user-details">
+            <p>Welcome, [User]</p> <!-- Replace with actual user detail retrieval -->
+        </div>
+    </header>
+    
     <div class="sidebar">
         <h2>Customer Dashboard</h2>
         <nav>
@@ -83,44 +92,24 @@
         
             <button type="submit">Submit Request</button>
         </form>
-        
-           </div>
+    </div>
 
     <script>
-        // JavaScript to toggle installation-related fields
         function toggleInstallationFields() {
             var requestType = document.getElementById('requestType').value;
             var installationFields = document.getElementById('installationFields');
-            if (requestType === 'installation') {
-                installationFields.style.display = 'block';
-            } else {
-                installationFields.style.display = 'none';
-            }
+            installationFields.style.display = requestType === 'installation' ? 'block' : 'none';
         }
 
-        // JavaScript to toggle loan-related fields
         function togglePaymentFields() {
             var loanOption = document.getElementById('loanOption').value;
-            var loanSection = document.getElementById('loanSection');
-            var paymentSection = document.getElementById('paymentSection');
-            if (loanOption === 'yes') {
-                loanSection.style.display = 'block';
-                paymentSection.style.display = 'none';
-            } else {
-                loanSection.style.display = 'none';
-                paymentSection.style.display = 'block';
-            }
+            document.getElementById('loanSection').style.display = loanOption === 'yes' ? 'block' : 'none';
+            document.getElementById('paymentSection').style.display = loanOption === 'no' ? 'block' : 'none';
         }
 
-        // JavaScript to toggle custom plan field
         function toggleCustomPlanField() {
             var chosenPlan = document.getElementById('chosenPlan').value;
-            var customPlanSection = document.getElementById('customPlanSection');
-            if (chosenPlan === 'custom') {
-                customPlanSection.style.display = 'block';
-            } else {
-                customPlanSection.style.display = 'none';
-            }
+            document.getElementById('customPlanSection').style.display = chosenPlan === 'custom' ? 'block' : 'none';
         }
     </script>
 </body>

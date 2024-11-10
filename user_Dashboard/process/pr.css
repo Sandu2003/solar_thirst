@@ -7,7 +7,8 @@
 }
 
 /* Header Styling */
-.header {
+
+header {
     background: linear-gradient(90deg, #254c6a, #218540);
     display: flex;
     justify-content: space-between;
@@ -15,13 +16,19 @@
     padding: 15px 25px;
     color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%; /* Ensure the header takes up the full width of the screen */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
 
-.header .logo img {
+
+.header .logo {
     height: 50px;
 }
 
-.header .user-details {
+.header .header-right p {
     font-size: 1.2em;
 }
 
@@ -66,7 +73,7 @@
     background-color: #218540;
 }
 
-/* Content Styling */
+/* Main Content Styling */
 .content {
     margin-left: 270px;
     padding: 30px;
@@ -84,7 +91,37 @@
     margin-bottom: 20px;
 }
 
-/* Form Elements */
+.content h3 {
+    font-size: 1.5em;
+    color: #254c6a;
+    margin-bottom: 15px;
+}
+
+/* Process Flow Styling */
+#process-flow {
+    margin-top: 30px;
+}
+
+.step {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.3em;
+    color: #218540;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1em;
+    color: #111827;
+}
+
+/* Add New Step Form Styling */
 form label {
     display: block;
     margin-top: 15px;
@@ -93,8 +130,6 @@ form label {
 }
 
 form input[type="text"], 
-form input[type="file"], 
-form select,
 form textarea {
     width: 100%;
     padding: 10px;
@@ -109,15 +144,13 @@ form textarea {
 }
 
 form input[type="text"]:focus, 
-form input[type="file"]:focus, 
-form select:focus, 
 form textarea:focus {
     box-shadow: 0 0 5px rgba(33, 133, 64, 0.4);
     border-color: #218540;
 }
 
 /* Button Styling */
-button[type="submit"] {
+.add-step-btn {
     background: linear-gradient(90deg, #254c6a, #218540);
     color: white;
     padding: 12px 20px;
@@ -130,27 +163,7 @@ button[type="submit"] {
     transition: background 0.3s, transform 0.2s;
 }
 
-button[type="submit"]:hover {
+.add-step-btn:hover {
     background: #218540;
     transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 10px;
-        box-shadow: none;
-    }
-
-    .content {
-        margin-left: 0;
-    }
 }

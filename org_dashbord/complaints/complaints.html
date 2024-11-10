@@ -7,20 +7,7 @@
     <link rel="stylesheet" href="com.css">
 </head>
 <body>
-    <!-- Sidebar and Header Included (Same as previous pages) -->
-    <div class="sidebar">
-        <h2>Organization Dashboard</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Customer Data</a></li>
-            <li><a href="#">Send Quotation</a></li>
-            <li><a href="#">Reply to Complaints</a></li>
-            <li><a href="#">Upgrade/Downgrade Requests</a></li>
-            <li><a href="#">Process Flow</a></li>
-        </ul>
-    </div>
-
-    <div class="dashboard-container">
+    <header>
         <div class="header">
             <div class="header-left">
                 <img class="logo" src="logo.png" alt="Company Logo">
@@ -29,52 +16,65 @@
                 <p>Account Details</p>
             </div>
         </div>
+    </header>
+    
+    <!-- Sidebar and Header Included (Same as previous pages) -->
+    <div class="sidebar">
+        <h2>Organization Dashboard</h2><nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Customer Data</a></li>
+            <li><a href="#">Send Quotation</a></li>
+            <li><a href="#">Reply to Complaints</a></li>
+            <li><a href="#">Upgrade/Downgrade Requests</a></li>
+            <li><a href="#">Process Flow</a></li>
+        </ul></nav>
+    </div>
 
-        <div class="content">
-            <h2>Reply to Complaints</h2>
-            <p>Here, you can view customer complaints and respond to them. Each complaint is listed by the user's username for better identification.</p>
-            
-            <!-- Complaint Table -->
-            <h3>Customer Complaints</h3>
-            <table class="complaints-table">
-                <thead>
-                    <tr>
-                        <th>Complaint ID</th>
-                        <th>Username</th>
-                        <th>Complaint</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Example Complaints -->
-                    <tr>
-                        <td>101</td>
-                        <td>john_doe</td>
-                        <td>My solar installation is not working as expected.</td>
-                        <td><button class="reply-btn" data-complaint-id="101">Reply</button></td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>mary_smith</td>
-                        <td>Service was delayed, and I haven't received an update.</td>
-                        <td><button class="reply-btn" data-complaint-id="102">Reply</button></td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="content">
+        <h2>Reply to Complaints</h2>
+        <p>Here, you can view customer complaints and respond to them. Each complaint is listed by the user's username for better identification.</p>
+        
+        <!-- Complaint Table -->
+        <h3>Customer Complaints</h3>
+        <table class="complaints-table">
+            <thead>
+                <tr>
+                    <th>Complaint ID</th>
+                    <th>Username</th>
+                    <th>Complaint</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Complaints -->
+                <tr>
+                    <td>101</td>
+                    <td>john_doe</td>
+                    <td>My solar installation is not working as expected.</td>
+                    <td><button class="reply-btn" data-complaint-id="101">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>mary_smith</td>
+                    <td>Service was delayed, and I haven't received an update.</td>
+                    <td><button class="reply-btn" data-complaint-id="102">Reply</button></td>
+                </tr>
+            </tbody>
+        </table>
 
-            <!-- Reply Form -->
-            <div id="reply-section" style="display: none;">
-                <h3>Respond to Complaint</h3>
-                <form action="/submit-reply" method="POST">
-                    <label for="complaint-id">Complaint ID</label>
-                    <input type="text" id="complaint-id" name="complaint-id" readonly>
-                    
-                    <label for="response">Your Reply</label>
-                    <textarea id="response" name="response" required></textarea>
+        <!-- Reply Form -->
+        <div id="reply-section" style="display: none;">
+            <h3>Respond to Complaint</h3>
+            <form action="/submit-reply" method="POST">
+                <label for="complaint-id">Complaint ID</label>
+                <input type="text" id="complaint-id" name="complaint-id" readonly>
+                
+                <label for="response">Your Reply</label>
+                <textarea id="response" name="response" required></textarea>
 
-                    <button type="submit" class="reply-submit-btn">Send Reply</button>
-                </form>
-            </div>
+                <button type="submit" class="reply-submit-btn">Send Reply</button>
+            </form>
         </div>
     </div>
 

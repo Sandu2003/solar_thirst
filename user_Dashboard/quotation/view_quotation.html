@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Quotation</title>
-    <!-- Link to updated styles -->
-    <link rel="stylesheet" href="D:/nibm/html/solar thirst/Dashboard/styles/styles.css">
+    <link rel="stylesheet" href="qu.css">
 </head>
 <body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="path/to/logo.png" alt="Company Logo"> <!-- Adjust path to logo -->
+        </div>
+        <div class="user-details">Welcome, [User]</div>
+    </div>
+
+    <!-- Sidebar Navigation -->
     <div class="sidebar">
         <h2>Dashboard</h2>
         <nav>
@@ -22,20 +30,26 @@
         </nav>
     </div>
 
+    <!-- Main Content -->
     <div class="content">
         <h2>Your Quotation</h2>
         <div class="quotation-details">
-            <h3>Service Plan: Premium Package</h3>
-            <p><strong>Total Cost:</strong> $1200</p>
-            <p><strong>Payment Terms:</strong> 30% upfront, 70% upon completion</p>
+            <!-- Displaying PDF -->
+            <iframe src="quotations/quotation_001.pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);"></iframe>
             <p><strong>Installment Options:</strong> Available</p>
-            <button>Accept Quotation</button>
-            <button>Reject Quotation</button>
+
+            <!-- Quotation Response Form -->
+            <form action="handle_quotation_response.php" method="POST" style="margin-top: 20px;">
+                <button type="submit" name="response" value="accept" class="button">Accept Quotation</button>
+                <button type="submit" name="response" value="reject" class="button reject">Reject Quotation</button>
+                <input type="hidden" name="quotation_id" value="001">
+            </form>
         </div>
-
-        <button class="home"><a href="home.html">Back to Home</a></button>
+        <button class="home">
+            <a href="home.html" style="text-decoration: none; color: white;">Back to Home</a>
+        </button>
     </div>
-
+    
     <script src="scripts.js"></script>
 </body>
 </html>

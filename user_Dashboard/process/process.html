@@ -3,58 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Process Flow</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Adjust path -->
-    <script src="scripts.js"></script> <!-- Adjust path -->
+    <title>Edit Process Flow</title>
+    <link rel="stylesheet" href="pr.css">
 </head>
 <body>
+      <header> <!-- Main Content -->
+
+                <div class="header-left">
+                    <img class="logo" src="logo.png" alt="Company Logo">
+                </div>
+                <div class="header-right">
+                    <p>Account Details</p>
+                </div>
+            </div>
+        </header> 
+    <!-- Sidebar -->
     <div class="sidebar">
-        <h2>Customer Dashboard</h2>
+        <h2>Organization Dashboard</h2>
         <nav>
             <ul>
-                <li><a href="service_request.html">Service Request</a></li>
-                <li><a href="view_quotation.html">View Quotation</a></li>
-                <li><a href="complaints.html">Complaints</a></li>
-                <li><a href="process_flow.html">Process Flow</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Customer Data</a></li>
+                <li><a href="#">Send Quotation</a></li>
+                <li><a href="#">Reply to Complaints</a></li>
+                <li><a href="#">Upgrade/Downgrade Requests</a></li>
+                <li><a href="#">Process Flow</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="content">
-        <h2>Installation Process and Payment Flow</h2>
-        <p>Here is a detailed breakdown of how the installation process and payment system works:</p>
-        
-        <section class="step">
-            <h3>Step 1: Request Service</h3>
-            <p>Once you fill out the service request form, our team will evaluate your needs and recommend the most suitable installation plan based on your requirements.</p>
-        </section>
+<section class="content">
 
-        <section class="step">
-            <h3>Step 2: Quotation</h3>
-            <p>After your service request is reviewed, you will receive a customized quotation. The quotation will include details of the installation plan, costs, and any additional services that might be required.</p>
-        </section>
+        <h2>Edit Process Flow</h2>
+        <p>In this section, you can view and edit the customer process flow steps. Each step can be modified with a description and day.</p>
 
-        <section class="step">
-            <h3>Step 3: Confirmation</h3>
-            <p>Once you approve the quotation, our team will confirm the schedule for installation. You will also be informed of the necessary documents required (e.g., payment confirmation, ID card copy, etc.).</p>
-        </section>
+        <h3>Process Flow Steps</h3>
+        <div id="process-flow">
+            <!-- Steps will be dynamically loaded from the server -->
+            <div class="step">
+                <h3>Step 1: Request Service</h3>
+                <p>Once you fill out the service request form, our team will evaluate your needs and recommend the most suitable installation plan based on your requirements.</p>
+            </div>
 
-        <section class="step">
-            <h3>Step 4: Payment Process</h3>
-            <p>We offer flexible payment options. You can either pay the full amount upfront or opt for installment plans. You’ll receive a payment receipt once the transaction is completed. If you choose an installment plan, your monthly payments will be automatically deducted based on the agreed schedule.</p>
-        </section>
+            <div class="step">
+                <h3>Step 2: Quotation</h3>
+                <p>After your service request is reviewed, you will receive a customized quotation. The quotation will include details of the installation plan, costs, and any additional services that might be required.</p>
+            </div>
 
-        <section class="step">
-            <h3>Step 5: Installation</h3>
-            <p>Once the payment is processed, we will schedule a date for installation. Our qualified technicians will arrive on-site and install the solar system. You’ll receive a confirmation once the installation is complete.</p>
-        </section>
+            <div class="step">
+                <h3>Step 3: Confirmation</h3>
+                <p>Once you approve the quotation, our team will confirm the schedule for installation. You will also be informed of the necessary documents required (e.g., payment confirmation, ID card copy, etc.).</p>
+            </div>
 
-        <section class="step">
-            <h3>Step 6: Final Verification & Handover</h3>
-            <p>After installation, we will conduct a final verification to ensure everything is working as expected. Once verified, the system will be handed over to you, and you can begin using it right away.</p>
-        </section>
+            <!-- Additional steps can be added here -->
+        </div>
 
-        <button class="home"><a href="../Home_page/home_page.html">Back to Home 💡</a></button>
+        <!-- Add New Step Form -->
+        <h3>Add New Step</h3>
+        <form id="add-step-form">
+            <label for="new-step-title">Step Title</label>
+            <input type="text" id="new-step-title" name="new-step-title" required placeholder="Step Title">
+            
+            <label for="new-step-description">Description</label>
+            <textarea id="new-step-description" name="new-step-description" required placeholder="Detailed description of this step..."></textarea>
+
+            <button type="submit" class="add-step-btn">Add Step</button>
+        </form>
     </div>
+</section>
+    <script src="process.js"></script>
 </body>
 </html>

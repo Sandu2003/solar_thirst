@@ -1,161 +1,179 @@
-/* Header styling */
-.header {
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #254c6a, #218540);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    color: rgb(3, 74, 17);
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 40px;
-    width: auto;
-}
-
-.header-right {
-    text-align: right;
-}
-
-.header-right p {
-    margin: 0;
-    color: rgb(3, 66, 45);
-    font-size: 0.9em;
-}
-
-/* Adjust dashboard container to compensate for fixed header */
-.dashboard-container {
-    display: flex;
-    margin-top: 70px; /* Same height as header to avoid overlap */
-}
-
-/* Sidebar styling remains the same */
-
-/* Main container */
-.dashboard-container {
-    display: flex;
-}
-
-/* Sidebar */
-.sidebar {
-    background-color: #254c6a;
+    padding: 15px 25px;
     color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%; /* Ensure the header takes up the full width of the screen */
+    box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.header .logo {
+    height: 50px;
+}
+
+.header .header-right p {
+    font-size: 1.2em;
+}
+
+/* Sidebar Styling */
+.sidebar {
     width: 250px;
+    background: #254c6a;
+    color: white;
     padding: 20px;
-    height: 100vh;
     position: fixed;
+    height: 100%;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
-    color: #218540;
+    color: #ffffff;
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.sidebar ul {
+.sidebar nav ul {
     list-style: none;
 }
 
-.sidebar li {
-    margin: 20px 0;
+.sidebar nav ul li {
+    margin: 15px 0;
 }
 
-.sidebar a {
-    color: white;
+.sidebar nav ul li a {
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #218540;
+}
+
+.sidebar nav ul li a.active {
+    background-color: #218540;
     font-weight: bold;
 }
 
-.sidebar a:hover {
-    color: #891c1f;
+/* Main Content Area */
+.main-container {
+    display: flex;
+}
+
+.dashboard-container {
+    margin-left: 270px; /* Sidebar width + padding */
+    padding: 30px;
+    background-color: #f4f6f9;
+    color: #111827;
+    font-size: 1em;
+    width: 100%;
 }
 
 .content {
-    margin-left:300px ;
+    width: 100%;
+    margin-left: 270px;
 }
+
 .content h2 {
-    color: #254c6a;
     font-size: 2em;
+    color: #254c6a;
+    border-bottom: 2px solid #218540;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 .content p {
     font-size: 1.1em;
-    color: #111827;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-/* Tables for Upgrade and Downgrade Requests */
+/* Table Styling */
 .request-table {
-    width: 900px;
+    width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #fff;
 }
 
-.request-table th,
-.request-table td {
-    padding: 10px;
+.request-table th, .request-table td {
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 .request-table th {
     background-color: #254c6a;
     color: white;
+    text-transform: uppercase;
 }
 
-.request-table tbody tr:hover {
+.request-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.request-table tr:hover {
     background-color: #f1f1f1;
 }
 
-h3 {
-    color: #254c6a;
-    margin-top: 30px;
-    font-size: 1.5em;
+/* Footer (if applicable) */
+footer {
+    background: #254c6a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .dashboard-container {
-        margin-left: 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
         padding: 10px;
     }
 
-    .sidebar {
-        width: 200px;
+    .main-container {
+        flex-direction: column;
+        margin-left: 0;
     }
 
-    .header-left .logo {
-        height: 30px;
+    .dashboard-container {
+        margin-left: 0;
     }
 
-    .header-right p {
-        font-size: 14px;
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .request-table th,
-    .request-table td {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .content h2 {
-        font-size: 1.5em;
-    }
-
-    .content p {
-        font-size: 1em;
+    .request-table th, .request-table td {
+        padding: 10px;
+        font-size: 0.9em;
     }
 }

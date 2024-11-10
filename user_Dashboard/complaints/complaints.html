@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="com.css">
 </head>
 <body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo"> <!-- Replace with actual logo path -->
+        </div>
+        <div class="user-details">
+            <span>Welcome, User</span> <!-- This could dynamically show user's name if needed -->
+        </div>
+    </header>
+
+    <!-- Sidebar Section -->
     <div class="sidebar">
         <h2>Dashboard</h2>
         <nav>
@@ -22,6 +33,7 @@
         </nav>
     </div>
 
+    <!-- Main Content Section -->
     <div class="content">
         <h2>Submit a Complaint</h2>
         <form id="complaintForm" action="submit_complaint.php" method="POST" enctype="multipart/form-data">
@@ -47,8 +59,6 @@
 
             <button type="submit">Submit Complaint</button>
         </form>
-
-        <button class="home"><a href="home.html">Back to Home</a></button>
     </div>
 
     <script src="scripts.js"></script>

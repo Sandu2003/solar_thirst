@@ -7,20 +7,7 @@
     <link rel="stylesheet" href="process.css">
 </head>
 <body>
-    <!-- Sidebar and Header Included (Same as previous pages) -->
-    <div class="sidebar">
-        <h2>Organization Dashboard</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Customer Data</a></li>
-            <li><a href="#">Send Quotation</a></li>
-            <li><a href="#">Reply to Complaints</a></li>
-            <li><a href="#">Upgrade/Downgrade Requests</a></li>
-            <li><a href="#">Process Flow</a></li>
-        </ul>
-    </div>
-
-    <div class="dashboard-container">
+    <header>
         <div class="header">
             <div class="header-left">
                 <img class="logo" src="logo.png" alt="Company Logo">
@@ -29,12 +16,29 @@
                 <p>Account Details</p>
             </div>
         </div>
+    </header>
 
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Organization Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Customer Data</a></li>
+                    <li><a href="#">Send Quotation</a></li>
+                    <li><a href="#">Reply to Complaints</a></li>
+                    <li><a href="#">Upgrade/Downgrade Requests</a></li>
+                    <li><a href="#">Process Flow</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content Area -->
         <div class="content">
             <h2>Edit Process Flow</h2>
             <p>In this section, you can view and edit the customer process flow steps. Each step can be modified with a description and day.</p>
 
-            <!-- Editable Process Flow Steps -->
             <h3>Process Flow Steps</h3>
             <div id="process-flow">
                 <div class="process-step">
@@ -55,10 +59,9 @@
                     <button class="save-btn">Save Changes</button>
                 </div>
 
-                <!-- More steps can be added in a similar structure -->
+                <!-- Additional steps can follow this format -->
             </div>
 
-            <!-- Add New Process Flow Step -->
             <h3>Add New Step</h3>
             <form id="add-step-form">
                 <label for="new-step-title">Step Title</label>
@@ -72,6 +75,7 @@
         </div>
     </div>
 
-    <script src="process.css"></script>
+    <!-- Optionally, include JS if required for handling form submissions -->
+    <script src="process.js"></script>
 </body>
 </html>

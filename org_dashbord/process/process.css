@@ -1,167 +1,189 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header and Sidebar */
+/* Header Styling */
 .header {
+    background: linear-gradient(90deg, #254c6a, #218540);
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #254c6a;
+    align-items: center;
+    padding: 15px 25px;
     color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header-left .logo {
-    height: 40px;
+.header .logo {
+    height: 50px;
 }
 
-.header-right p {
-    margin: 0;
-    padding: 0;
-    color: white;
+.header .header-right p {
+    font-size: 1.2em;
+    margin-right: 10px;
 }
 
+/* Sidebar Styling */
 .sidebar {
     width: 250px;
-    background-color: #254c6a;
+    background: #254c6a;
     color: white;
-    height: 100vh;
-    padding-top: 20px;
+    padding: 20px;
     position: fixed;
-    top: 0;
+    height: 100%;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
+    color: white;
+    font-size: 1.5em;
     text-align: center;
-    font-size: 20px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding-left: 0;
+.sidebar nav ul {
+    list-style: none;
 }
 
-.sidebar ul li {
-    margin: 10px 0;
+.sidebar nav ul li {
+    margin: 15px 0;
 }
 
-.sidebar ul li a {
+.sidebar nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.1em;
     display: block;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.sidebar ul li a:hover {
+.sidebar nav ul li a:hover {
     background-color: #218540;
 }
 
-/* Content Section */
-.dashboard-container {
+/* Main Content Area */
+.main-container {
     display: flex;
-    margin-left: 250px;
-    padding: 20px;
-    flex-direction: column;
 }
 
-/* Editable Process Flow */
-#process-flow {
+.content {
+    margin-left: 270px;
+    padding: 30px;
+    background-color: #f4f6f9;
+    color: #111827;
+    font-size: 1em;
+    min-height: 100vh;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #254c6a;
+    border-bottom: 2px solid #218540;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 1.5em;
     margin-top: 20px;
+    color: #254c6a;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Process Flow Steps */
+#process-flow {
+    margin-top: 30px;
 }
 
 .process-step {
-    background-color: #fff;
+    background-color: white;
     padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
 }
 
 .process-step h4 {
-    font-size: 1.3em;
-    color: #254c6a;
+    color: #218540;
+    font-size: 1.4em;
 }
 
 .editable-description {
     margin-top: 10px;
 }
 
-.description-text {
-    font-size: 1em;
-    color: #333;
-}
-
 .edit-textarea {
-    display: none;
     width: 100%;
-    padding: 10px;
+    height: 120px;
     margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
     border: 1px solid #ddd;
-    border-radius: 4px;
     font-size: 1em;
-    color: #333;
+    resize: vertical;
 }
 
 .save-btn {
-    background-color: #218540;
+    background: linear-gradient(90deg, #254c6a, #218540);
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1em;
     margin-top: 10px;
-    display: none;
+    transition: background 0.3s;
 }
 
 .save-btn:hover {
     background-color: #891c1f;
 }
 
-/* Add New Step Form */
+/* Add New Process Step Form */
 #add-step-form {
     margin-top: 30px;
-    background-color: #f9f9f9;
+    background-color: white;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #add-step-form label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
     color: #254c6a;
-    margin-bottom: 8px;
 }
 
-#add-step-form input[type="text"],
-#add-step-form textarea {
+#add-step-form input, #add-step-form textarea {
     width: 100%;
     padding: 10px;
+    margin-top: 5px;
     margin-bottom: 15px;
+    border-radius: 5px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #111827;
 }
 
 #add-step-form button {
-    display: inline-block;
-    background-color: #218540;
+    background: linear-gradient(90deg, #254c6a, #218540);
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-size: 1.2em;
+    transition: background 0.3s;
 }
 
 #add-step-form button:hover {
@@ -169,37 +191,24 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .dashboard-container {
-        margin-left: 0;
-        padding: 10px;
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 200px;
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        box-shadow: none;
     }
 
-    .header-left .logo {
-        height: 30px;
+    .content {
+        margin-left: 0;
     }
 
-    .header-right p {
-        font-size: 14px;
-    }
-
-    .process-step h4 {
-        font-size: 1.1em;
-    }
-
-    .process-step .description-text {
-        font-size: 0.9em;
-    }
-
-    .content h2 {
-        font-size: 1.5em;
-    }
-
-    .content p {
-        font-size: 1em;
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
