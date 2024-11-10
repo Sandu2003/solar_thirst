@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Quotation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+            <div class="header-left">
+                <img class="logo" src="../assests/logo.png" alt="Company Logo">
+            </div>
+            <div class="header-right">
+                <p>Account Details</p>
+            </div>
+      
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Organization Dashboard</h2><nav>
+            <ul>
+                <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
+                <li><a href="../quotation_send_org/quotation_send.html">send quotation</a></li>
+                <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
+                <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
+                <li><a href="../process_org/process.html">Process Flow</a></li>
+            </ul></nav>
+        </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h2>Send Quotation</h2>
+        <p>
+            Use this form to create and send a quotation to customers based on their selected service plan. Fill out the required details below, and upload any pre-prepared quotation document. Add comments as needed and click "Generate PDF" to create a quotation document that you can email or download.
+        </p>
+
+        <!-- Quotation Form -->
+        <form action="generate_quotation.php" method="post" enctype="multipart/form-data" class="quotation-form">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerEmail">Customer Email:</label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
+
+            <label for="servicePlan">Service Plan:</label>
+            <select id="servicePlan" name="servicePlan" required>
+                <option value="standard">Standard Plan</option>
+                <option value="premium">Premium Plan</option>
+                <option value="custom">Custom Plan</option>
+            </select>
+
+            <label for="totalAmount">Total Amount ($):</label>
+            <input type="number" id="totalAmount" name="totalAmount" required>
+
+            <label for="quotationFile">Upload Quotation File (PDF):</label>
+            <input type="file" id="quotationFile" name="quotationFile" accept=".pdf">
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Add any comments or notes here..." rows="3"></textarea>
+
+            <button type="submit" class="send-btn">Send Quotation</button>
+        </form>
+    </div>
+    
+</body>
+</html>

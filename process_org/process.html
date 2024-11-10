@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Flow - Edit</title>
+    <link rel="stylesheet" href="process.css">
+</head>
+<body>
+    <header>
+        
+            <div class="header-left">
+                <img class="logo" src="../assests/logo.png" alt="Company Logo">
+            </div>
+            <div class="header-right">
+                <p>Account Details</p>
+            </div>
+      
+    </header>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Organization Dashboard</h2><nav>
+            <ul>
+                <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
+                <li><a href="../quotation_send_org/quotation_send.html">send quotation</a></li>
+                <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
+                <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
+                <li><a href="../process_org/process.html">Process Flow</a></li>
+            </ul></nav>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <h2>Edit Process Flow</h2>
+            <p>In this section, you can view and edit the customer process flow steps. Each step can be modified with a description and day.</p>
+
+            <h3>Process Flow Steps</h3>
+            <div id="process-flow">
+                <div class="process-step">
+                    <h4>Step 1: Customer signs contract</h4>
+                    <div class="editable-description">
+                        <p class="description-text">This is the initial step where the customer signs the agreement for the solar system installation.</p>
+                        <textarea class="edit-textarea" placeholder="Edit description here..."></textarea>
+                    </div>
+                    <button class="save-btn">Save Changes</button>
+                </div>
+
+                <div class="process-step">
+                    <h4>Step 2: Solar system installation scheduled</h4>
+                    <div class="editable-description">
+                        <p class="description-text">The date for solar system installation is set and the necessary resources are allocated.</p>
+                        <textarea class="edit-textarea" placeholder="Edit description here..."></textarea>
+                    </div>
+                    <button class="save-btn">Save Changes</button>
+                </div>
+
+                <!-- Additional steps can follow this format -->
+            </div>
+
+            <h3>Add New Step</h3>
+            <form id="add-step-form">
+                <label for="new-step-title">Step Title</label>
+                <input type="text" id="new-step-title" name="new-step-title" required placeholder="Step Title">
+                
+                <label for="new-step-description">Description</label>
+                <textarea id="new-step-description" name="new-step-description" required placeholder="Detailed description of this step..."></textarea>
+
+                <button type="submit" class="add-step-btn">Add Step</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Optionally, include JS if required for handling form submissions -->
+    <script src="process.js"></script>
+</body>
+</html>

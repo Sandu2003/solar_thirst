@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade/Downgrade Requests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+            <div class="header-left">
+                <img class="logo" src="../assests/logo.png" alt="Company Logo">
+            </div>
+            <div class="header-right">
+                <p>Account Details</p>
+            </div>
+      
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Organization Dashboard</h2><nav>
+            <ul>
+                <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
+                <li><a href="../quotation_send_org/quotation_send.html">send quotation</a></li>
+                <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
+                <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
+                <li><a href="../process_org/process.html">Process Flow</a></li>
+            </ul></nav>
+        </div>
+
+        <div class="content">
+            <h2>Upgrade/Downgrade Requests</h2>
+            <p>
+                This page displays all the upgrade and downgrade requests submitted by customers. The requests are organized into two separate tables, one for upgrade requests and one for downgrade requests. Each request includes relevant customer data and the reason for their request.
+            </p>
+
+            <!-- Upgrade Requests Table -->
+            <h3>Upgrade Requests</h3>
+            <table class="request-table">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Current Plan</th>
+                        <th>Requested Plan</th>
+                        <th>Request Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example data, replace with dynamically fetched data -->
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>Standard Plan</td>
+                        <td>Premium Plan</td>
+                        <td>2024-11-08</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Mary Jane</td>
+                        <td>mary.jane@example.com</td>
+                        <td>Basic Plan</td>
+                        <td>Standard Plan</td>
+                        <td>2024-11-09</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Downgrade Requests Table -->
+            <h3>Downgrade Requests</h3>
+            <table class="request-table">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Current Plan</th>
+                        <th>Requested Plan</th>
+                        <th>Request Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example data, replace with dynamically fetched data -->
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>jane.smith@example.com</td>
+                        <td>Premium Plan</td>
+                        <td>Standard Plan</td>
+                        <td>2024-11-07</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Bob Johnson</td>
+                        <td>bob.johnson@example.com</td>
+                        <td>Custom Plan</td>
+                        <td>Basic Plan</td>
+                        <td>2024-11-09</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

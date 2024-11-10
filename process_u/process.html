@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Process Flow</title>
+    <link rel="stylesheet" href="pr.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assests/logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
+        </div>
+        <div class="user-details">
+            <p>Welcome, [User]</p> <!-- Replace with actual user detail retrieval -->
+        </div>
+    </header>
+    
+    <div class="sidebar">
+        <h2>Customer Dashboard</h2>
+        <nav>
+            <ul>
+                <li><a href="../sr_form_user/Service_request.html">Service Request</a></li>
+                <li><a href="../quotation_user/view_quotation.html">View Quotation</a></li>
+                <li><a href="../complaints_u/complaints.html">Submit a Complaint</a></li>
+                <li><a href="../down_up_pkg_user/down_up.html">Upgrade/Downgrade Package</a></li>
+                <li><a href="../process_u/process.html">Process Flow</a></li>
+                <li><a href="../contact_user/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<section class="content">
+
+        <h2>Edit Process Flow</h2>
+        <p>In this section, you can view and edit the customer process flow steps. Each step can be modified with a description and day.</p>
+
+        <h3>Process Flow Steps</h3>
+        <div id="process-flow">
+            <!-- Steps will be dynamically loaded from the server -->
+            <div class="step">
+                <h3>Step 1: Request Service</h3>
+                <p>Once you fill out the service request form, our team will evaluate your needs and recommend the most suitable installation plan based on your requirements.</p>
+            </div>
+
+            <div class="step">
+                <h3>Step 2: Quotation</h3>
+                <p>After your service request is reviewed, you will receive a customized quotation. The quotation will include details of the installation plan, costs, and any additional services that might be required.</p>
+            </div>
+
+            <div class="step">
+                <h3>Step 3: Confirmation</h3>
+                <p>Once you approve the quotation, our team will confirm the schedule for installation. You will also be informed of the necessary documents required (e.g., payment confirmation, ID card copy, etc.).</p>
+            </div>
+
+            <!-- Additional steps can be added here -->
+        </div>
+
+        <!-- Add New Step Form -->
+        <h3>Add New Step</h3>
+        <form id="add-step-form">
+            <label for="new-step-title">Step Title</label>
+            <input type="text" id="new-step-title" name="new-step-title" required placeholder="Step Title">
+            
+            <label for="new-step-description">Description</label>
+            <textarea id="new-step-description" name="new-step-description" required placeholder="Detailed description of this step..."></textarea>
+
+            <button type="submit" class="add-step-btn">Add Step</button>
+        </form>
+    </div>
+</section>
+    <script src="process.js"></script>
+</body>
+</html>
