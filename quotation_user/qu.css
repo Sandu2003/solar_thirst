@@ -186,7 +186,12 @@ form input[type="file"]:hover,
 form select:hover {
     border-color: #254c6a;
 }
-
+#feedbackMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {

@@ -8,25 +8,25 @@
 </head>
 <body>
     <header>
-        
-            <div class="header-left">
-                <img class="logo" src="../assests/logo.png" alt="Company Logo">
-            </div>
-            <div class="header-right">
-                <p>Account Details</p>
-            </div>
-      
+        <div class="header-left">
+            <img class="logo" src="../assests/logo.png" alt="Company Logo">
+        </div>
+        <div class="header-right">
+            <p>⚙️Admin</p>
+        </div>
     </header>
     
     <div class="sidebar">
-        <h2>Organization Dashboard</h2><nav>
-        <ul>
-            <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
-            <li><a href="../quotation_send_org/quotation_send.html">send quotation</a></li>
-            <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
-            <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
-            <li><a href="../process_org/process.html">Process Flow</a></li>
-        </ul></nav>
+        <h2>Organization Dashboard</h2>
+        <nav>
+            <ul>
+                <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
+                <li><a href="../quotation_send_org/quotation_send.html">Send Quotation</a></li>
+                <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
+                <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
+                <li><a href="../process_org/process.html">Process Flow</a></li>
+            </ul>
+        </nav>
     </div>
 
     <div class="content">
@@ -64,18 +64,51 @@
         <!-- Reply Form -->
         <div id="reply-section" style="display: none;">
             <h3>Respond to Complaint</h3>
-            <form action="/submit-reply" method="POST">
+            <form id="replyForm" method="POST">
                 <label for="complaint-id">Complaint ID</label>
                 <input type="text" id="complaint-id" name="complaint-id" readonly>
-                
+
                 <label for="response">Your Reply</label>
                 <textarea id="response" name="response" required></textarea>
 
                 <button type="submit" class="reply-submit-btn">Send Reply</button>
             </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" style="display: none; padding: 20px; background-color: #4CAF50; color: white; border-radius: 5px;">
+                <h3>Message Sent Successfully!</h3>
+            </div>
         </div>
     </div>
 
-    <script src="com.js"></script>
+    <script>
+        // Handle "Reply" button click to show the reply form
+        const replyButtons = document.querySelectorAll('.reply-btn');
+        const replySection = document.getElementById('reply-section');
+        const complaintIdInput = document.getElementById('complaint-id');
+        const successMessage = document.getElementById('successMessage');
+
+        replyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Set the complaint ID in the form input
+                complaintIdInput.value = this.getAttribute('data-complaint-id');
+                // Show the reply form
+                replySection.style.display = 'block';
+                successMessage.style.display = 'none'; // Hide success message if form is reopened
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('replyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Hide the reply form and show success message
+            replySection.style.display = 'none';
+            successMessage.style.display = 'block';
+
+            // Optionally, reset the form
+            document.getElementById('replyForm').reset();
+        });
+    </script>
 </body>
 </html>

@@ -15,5 +15,5 @@ function generateQuotationPDF($quotationData) {
     $filePath = 'quotations/quotation_' . $quotationData['customer_id'] . '.pdf';
     $pdf->Output('F', $filePath); // Save the file
 
-    return $filePath;
+    return $fi
 }

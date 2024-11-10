@@ -13,7 +13,7 @@
             <img src="../assests/logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
         </div>
         <div class="user-details">
-            <p>Welcome, [User]</p> <!-- Replace with actual user detail retrieval -->
+            <p>Welcome,<a href="#">User</a>👨🏻‍💼</p> <!-- Replace with actual user detail retrieval -->
         </div>
     </header>
     
@@ -34,28 +34,37 @@
     <!-- Main Content Section -->
     <div class="content">
         <h2>Upgrade or Downgrade Package</h2>
-        <form id="upgradeDowngradeForm" action="submit_upgrade_downgrade.php" method="POST">
-            <label for="currentPackage">Current Package:</label>
-            <select id="currentPackage" name="currentPackage" required>
-                <option value="basic">Basic Package</option>
-                <option value="standard">Standard Package</option>
-                <option value="premium">Premium Package</option>
-            </select>
-            <br><br>
+        
+        <div id="upgradeDowngradeFormContainer">
+            <form id="upgradeDowngradeForm" action="submit_upgrade_downgrade.php" method="POST">
+                <label for="currentPackage">Current Package:</label>
+                <select id="currentPackage" name="currentPackage" required>
+                    <option value="basic">Basic Package</option>
+                    <option value="standard">Standard Package</option>
+                    <option value="premium">Premium Package</option>
+                </select>
+                <br><br>
 
-            <label for="upgradeOption">Upgrade or Downgrade:</label>
-            <select id="upgradeOption" name="upgradeOption" required>
-                <option value="upgrade">Upgrade</option>
-                <option value="downgrade">Downgrade</option>
-            </select>
-            <br><br>
+                <label for="upgradeOption">Upgrade or Downgrade:</label>
+                <select id="upgradeOption" name="upgradeOption" required>
+                    <option value="upgrade">Upgrade</option>
+                    <option value="downgrade">Downgrade</option>
+                </select>
+                <br><br>
 
-            <label for="reason">Reason for Request:</label>
-            <textarea id="reason" name="reason" rows="4" placeholder="Provide a reason for the upgrade or downgrade" required></textarea>
-            <br><br>
+                <label for="reason">Reason for Request:</label>
+                <textarea id="reason" name="reason" rows="4" placeholder="Provide a reason for the upgrade or downgrade" required></textarea>
+                <br><br>
 
-            <button type="submit">Submit Request</button>
-        </form>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+
+        <!-- Success message container -->
+        <div id="successMessage" style="display: none; padding: 20px; background-color: #4CAF50; color: white; border-radius: 5px;">
+            <h3>Thank you for your request!</h3>
+            <p>Your package upgrade or downgrade request has been successfully submitted. Our team will review your request and get back to you soon.</p>
+        </div>
     </div>
 
     <!-- Process Flow Section -->
@@ -93,5 +102,16 @@
             <p>After installation, we will conduct a final verification to ensure everything is working as expected. Once verified, the system will be handed over to you, and you can begin using it right away.</p>
         </section>
     </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('upgradeDowngradeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the actual form submission
+            
+            // Hide the form and show the success message
+            document.getElementById('upgradeDowngradeFormContainer').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
 </body>
 </html>

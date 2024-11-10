@@ -13,7 +13,7 @@
             <img src="../assests/logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
         </div>
         <div class="user-details">
-            <p>Welcome, [User]</p> <!-- Replace with actual user detail retrieval -->
+            <p>Welcome,<a href="#">User</a>👨🏻‍💼</p> <!-- Replace with actual user detail retrieval -->
         </div>
     </header>
     
@@ -34,31 +34,49 @@
     <!-- Main Content Section -->
     <div class="content">
         <h2>Submit a Complaint</h2>
-        <form id="complaintForm" action="submit_complaint.php" method="POST" enctype="multipart/form-data">
-            <label for="fullName">Your Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
-            <br><br>
+        
+        <div id="complaintFormContainer">
+            <form id="complaintForm" action="submit_complaint.php" method="POST" enctype="multipart/form-data">
+                <label for="fullName">Your Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <br><br>
 
-            <label for="complaintType">Complaint Type:</label>
-            <select id="complaintType" name="complaintType" required>
-                <option value="service">Service Issue</option>
-                <option value="billing">Billing Issue</option>
-                <option value="installation">Installation Issue</option>
-            </select>
-            <br><br>
+                <label for="complaintType">Complaint Type:</label>
+                <select id="complaintType" name="complaintType" required>
+                    <option value="service">Service Issue</option>
+                    <option value="billing">Billing Issue</option>
+                    <option value="installation">Installation Issue</option>
+                </select>
+                <br><br>
 
-            <label for="complaintDescription">Description of Complaint:</label>
-            <textarea id="complaintDescription" name="complaintDescription" rows="5" required></textarea>
-            <br><br>
+                <label for="complaintDescription">Description of Complaint:</label>
+                <textarea id="complaintDescription" name="complaintDescription" rows="5" required></textarea>
+                <br><br>
 
-            <label for="supportingFiles">Upload Supporting Documents (if any):</label>
-            <input type="file" id="supportingFiles" name="supportingFiles" accept="image/*, .pdf">
-            <br><br>
+                <label for="supportingFiles">Upload Supporting Documents (if any):</label>
+                <input type="file" id="supportingFiles" name="supportingFiles" accept="image/*, .pdf">
+                <br><br>
 
-            <button type="submit">Submit Complaint</button>
-        </form>
+                <button type="submit">Submit Complaint</button>
+            </form>
+        </div>
+
+        <!-- Success message container -->
+        <div id="successMessage" style="display: none; padding: 20px; background-color: #4CAF50; color: white; border-radius: 5px;">
+            <h3>Thank you for let us know!</h3>
+            <p>We're sorry to hear about the issue you're facing. We'll fix any service problem and get back to you as soon as possible. Your complaint has been submitted successfully.</p>
+        </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById('complaintForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the actual form submission
+            
+            // Hide the complaint form and show the success message
+            document.getElementById('complaintFormContainer').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
 </body>
 </html>

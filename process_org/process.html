@@ -8,26 +8,26 @@
 </head>
 <body>
     <header>
-        
-            <div class="header-left">
-                <img class="logo" src="../assests/logo.png" alt="Company Logo">
-            </div>
-            <div class="header-right">
-                <p>Account Details</p>
-            </div>
-      
+        <div class="header-left">
+            <img class="logo" src="../assests/logo.png" alt="Company Logo">
+        </div>
+        <div class="header-right">
+            <p>⚙️Admin</p>
+        </div>
     </header>
 
     <div class="main-container">
         <div class="sidebar">
-            <h2>Organization Dashboard</h2><nav>
-            <ul>
-                <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
-                <li><a href="../quotation_send_org/quotation_send.html">send quotation</a></li>
-                <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
-                <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
-                <li><a href="../process_org/process.html">Process Flow</a></li>
-            </ul></nav>
+            <h2>Organization Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="../customer_d_org/cu_data.html">Customer Data</a></li>
+                    <li><a href="../quotation_send_org/quotation_send.html">Send Quotation</a></li>
+                    <li><a href="../complaints_org/complaints.html">Reply to Complaints</a></li>
+                    <li><a href="../up-down_grade_org/up.html">Upgrade/Downgrade Requests</a></li>
+                    <li><a href="../process_org/process.html">Process Flow</a></li>
+                </ul>
+            </nav>
         </div>
 
         <!-- Main Content Area -->
@@ -37,29 +37,29 @@
 
             <h3>Process Flow Steps</h3>
             <div id="process-flow">
-                <div class="process-step">
+                <div class="process-step" id="step-1">
                     <h4>Step 1: Customer signs contract</h4>
                     <div class="editable-description">
                         <p class="description-text">This is the initial step where the customer signs the agreement for the solar system installation.</p>
                         <textarea class="edit-textarea" placeholder="Edit description here..."></textarea>
                     </div>
-                    <button class="save-btn">Save Changes</button>
+                    <button class="save-btn" onclick="saveChanges(1)">Save Changes</button>
                 </div>
 
-                <div class="process-step">
+                <div class="process-step" id="step-2">
                     <h4>Step 2: Solar system installation scheduled</h4>
                     <div class="editable-description">
                         <p class="description-text">The date for solar system installation is set and the necessary resources are allocated.</p>
                         <textarea class="edit-textarea" placeholder="Edit description here..."></textarea>
                     </div>
-                    <button class="save-btn">Save Changes</button>
+                    <button class="save-btn" onclick="saveChanges(2)">Save Changes</button>
                 </div>
 
                 <!-- Additional steps can follow this format -->
             </div>
 
             <h3>Add New Step</h3>
-            <form id="add-step-form">
+            <form id="add-step-form" onsubmit="addStep(event)">
                 <label for="new-step-title">Step Title</label>
                 <input type="text" id="new-step-title" name="new-step-title" required placeholder="Step Title">
                 
@@ -71,7 +71,50 @@
         </div>
     </div>
 
-    <!-- Optionally, include JS if required for handling form submissions -->
-    <script src="process.js"></script>
+    <!-- JavaScript for functionality -->
+    <script>
+        // Function to save changes made to the description
+        function saveChanges(stepId) {
+            // Get the corresponding step element and description paragraph
+            const stepElement = document.getElementById(`step-${stepId}`);
+            const descriptionParagraph = stepElement.querySelector('.description-text');
+            const textarea = stepElement.querySelector('.edit-textarea');
+
+            // Update the paragraph with the text from the textarea
+            descriptionParagraph.textContent = textarea.value;
+
+            // Clear the textarea after saving
+            textarea.value = '';
+        }
+
+        // Function to add a new step
+        function addStep(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Get the values from the form inputs
+            const stepTitle = document.getElementById('new-step-title').value;
+            const stepDescription = document.getElementById('new-step-description').value;
+
+            // Create a new step element
+            const newStep = document.createElement('div');
+            newStep.classList.add('process-step');
+
+            newStep.innerHTML = `
+                <h4>${stepTitle}</h4>
+                <div class="editable-description">
+                    <p class="description-text">${stepDescription}</p>
+                    <textarea class="edit-textarea" placeholder="Edit description here..."></textarea>
+                </div>
+                <button class="save-btn" onclick="saveChanges(newStep)">Save Changes</button>
+            `;
+
+            // Append the new step to the process flow
+            const processFlow = document.getElementById('process-flow');
+            processFlow.appendChild(newStep);
+
+            // Reset the form
+            document.getElementById('add-step-form').reset();
+        }
+    </script>
 </body>
 </html>

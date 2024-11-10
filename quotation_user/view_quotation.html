@@ -12,7 +12,7 @@
             <img src="../assests/logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
         </div>
         <div class="user-details">
-            <p>Welcome, [User]</p> <!-- Replace with actual user detail retrieval -->
+            <p>Welcome,<a href="#">User</a>👨🏻‍💼</p> <!-- Replace with actual user detail retrieval -->
         </div>
     </header>
     
@@ -35,19 +35,38 @@
         <h2>Your Quotation</h2>
         <div class="quotation-details">
             <!-- Displaying PDF -->
-            <iframe src="quotations/quotation_001.pdf" width="100%" height="200px" style="border: 1px solid #ddd; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);"></iframe>
+            <iframe src="../assests/TEST PAPER.pdf" width="100%" height="200px" style="border: 1px solid #ddd; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);"></iframe>
             <p><strong>Installment Options:</strong> Available</p>
 
             <!-- Quotation Response Form -->
-            <form action="handle_quotation_response.php" method="POST" style="margin-top: 20px;">
-                <button type="submit" name="response" value="accept" class="button">Accept Quotation</button>
-                <button type="submit" name="response" value="reject" class="button reject">Reject Quotation</button>
-                <input type="hidden" name="quotation_id" value="001">
-            </form>
-        </div>
+            <div id="quotationResponse">
+                <button id="acceptButton" class="button">Accept Quotation</button>
+                <button id="rejectButton" class="button reject">Reject Quotation</button>
+            </div>
 
+            <!-- Feedback Message -->
+            <div id="feedbackMessage"></div>
+        </div>
     </div>
     
+    <script>
+        // Function to handle accepting the quotation
+        document.getElementById('acceptButton').addEventListener('click', function() {
+            document.getElementById('feedbackMessage').innerHTML = `
+                <p>Quotation accepted. The service will be scheduled in shortly.</p>
+            `;
+            document.getElementById('quotationResponse').style.display = 'none'; // Hide the buttons after response
+        });
+
+        // Function to handle rejecting the quotation
+        document.getElementById('rejectButton').addEventListener('click', function() {
+            document.getElementById('feedbackMessage').innerHTML = `
+                <p>Quotation rejected. We’ll contact you immediately.</p>
+            `;
+            document.getElementById('quotationResponse').style.display = 'none'; // Hide the buttons after response
+        });
+    </script>
+
     <script src="scripts.js"></script>
 </body>
 </html>

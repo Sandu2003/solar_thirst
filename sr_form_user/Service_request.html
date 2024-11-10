@@ -13,7 +13,7 @@
             <img src="../assests/logo.png" alt="Company Logo"> <!-- Replace with your logo path -->
         </div>
         <div class="user-details">
-            <p>Welcome, [User]</p> <!-- Replace with actual user detail retrieval -->
+            <p>Welcome,<a href="#">User</a>👨🏻‍💼</p> <!-- Replace with actual user detail retrieval -->
         </div>
     </header>
     
@@ -33,84 +33,105 @@
 
     <div class="content">
         <h2>Service Request Form</h2>
-        <form id="serviceRequestForm" action="submit_request.php" method="POST" enctype="multipart/form-data">
-            
-            <label for="requestType">Request Type:</label>
-            <select id="requestType" name="requestType" required onchange="toggleInstallationFields()">
-                <option value="service">Service Request</option>
-                <option value="installation">Installation</option>
-                <option value="upgrade">Upgrade</option>
-            </select>
-            <br><br>
+        
+        <div id="formContainer">
+            <form id="serviceRequestForm" action="submit_request.php" method="POST" enctype="multipart/form-data">
+                
+                <label for="requestType">Request Type:</label>
+                <select id="requestType" name="requestType" required onchange="toggleInstallationFields()">
+                    <option value="service">Service Request</option>
+                    <option value="installation">Installation</option>
+                    <option value="upgrade">Upgrade</option>
+                </select>
+                <br><br>
 
-            <!-- Installation-related fields -->
-            <div id="installationFields" style="display: none;">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
-                <br><br>
-        
-                <label for="idCard">Upload ID Card Copy:</label>
-                <input type="file" id="idCard" name="idCard" accept="image/*" required>
-                <br><br>
-        
-                <label for="loanOption">Have you taken a loan for this service?</label>
-                <select id="loanOption" name="loanOption" required onchange="togglePaymentFields()">
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
-                </select>
-                <br><br>
-        
-                <div id="paymentSection">
-                    <label for="paymentReceipt">Upload Payment Confirmation Receipt:</label>
-                    <input type="file" id="paymentReceipt" name="paymentReceipt" accept="image/*">
+                <!-- Installation-related fields -->
+                <div id="installationFields" style="display: none;">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <br><br>
+            
+                    <label for="idCard">Upload ID Card Copy:</label>
+                    <input type="file" id="idCard" name="idCard" accept="image/*" required>
+                    <br><br>
+            
+                    <label for="loanOption">Have you taken a loan for this service?</label>
+                    <select id="loanOption" name="loanOption" required onchange="togglePaymentFields()">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    <br><br>
+            
+                    <div id="paymentSection">
+                        <label for="paymentReceipt">Upload Payment Confirmation Receipt:</label>
+                        <input type="file" id="paymentReceipt" name="paymentReceipt" accept="image/*">
+                        <br><br>
+                    </div>
+            
+                    <div id="loanSection" style="display: none;">
+                        <label for="loanReceipt">Upload Loan Confirmation Receipt:</label>
+                        <input type="file" id="loanReceipt" name="loanReceipt" accept="image/*">
+                        <br><br>
+                    </div>
+            
+                    <label for="chosenPlan">Chosen Plan:</label>
+                    <select id="chosenPlan" name="chosenPlan" onchange="toggleCustomPlanField()">
+                        <option value="company_decide">Let the company decide the best plan</option>
+                        <option value="custom">Enter your preferred plan</option>
+                    </select>
+                    <br><br>
+            
+                    <div id="customPlanSection" style="display: none;">
+                        <label for="customPlanText">Enter Your Preferred Plan:</label>
+                        <input type="text" id="customPlanText" name="customPlanText">
+                        <br><br>
+                    </div>
+            
+                    <label for="lightBill">Upload Latest Light Bill:</label>
+                    <input type="file" id="lightBill" name="lightBill" accept="image/*" required>
                     <br><br>
                 </div>
-        
-                <div id="loanSection" style="display: none;">
-                    <label for="loanReceipt">Upload Loan Confirmation Receipt:</label>
-                    <input type="file" id="loanReceipt" name="loanReceipt" accept="image/*">
-                    <br><br>
-                </div>
-        
-                <label for="chosenPlan">Chosen Plan:</label>
-                <select id="chosenPlan" name="chosenPlan" onchange="toggleCustomPlanField()">
-                    <option value="company_decide">Let the company decide the best plan</option>
-                    <option value="custom">Enter your preferred plan</option>
-                </select>
-                <br><br>
-        
-                <div id="customPlanSection" style="display: none;">
-                    <label for="customPlanText">Enter Your Preferred Plan:</label>
-                    <input type="text" id="customPlanText" name="customPlanText">
-                    <br><br>
-                </div>
-        
-                <label for="lightBill">Upload Latest Light Bill:</label>
-                <input type="file" id="lightBill" name="lightBill" accept="image/*" required>
-                <br><br>
-            </div>
-        
-            <button type="submit">Submit Request</button>
-        </form>
+            
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+
+        <!-- Success message container -->
+        <div id="successMessage" style="display: none; padding: 20px; background-color: #4CAF50; color: white; border-radius: 5px;">
+            <h3>Request Submitted Successfully!</h3>
+            <p>Your service request has been received. We will contact you shortly.</p>
+        </div>
     </div>
 
     <script>
+        // Function to toggle the display of installation-related fields based on request type
         function toggleInstallationFields() {
             var requestType = document.getElementById('requestType').value;
             var installationFields = document.getElementById('installationFields');
             installationFields.style.display = requestType === 'installation' ? 'block' : 'none';
         }
 
+        // Function to toggle the display of loan-related fields based on loan option
         function togglePaymentFields() {
             var loanOption = document.getElementById('loanOption').value;
             document.getElementById('loanSection').style.display = loanOption === 'yes' ? 'block' : 'none';
             document.getElementById('paymentSection').style.display = loanOption === 'no' ? 'block' : 'none';
         }
 
+        // Function to toggle the custom plan input field based on chosen plan
         function toggleCustomPlanField() {
             var chosenPlan = document.getElementById('chosenPlan').value;
             document.getElementById('customPlanSection').style.display = chosenPlan === 'custom' ? 'block' : 'none';
         }
+
+        // Handle form submission
+        document.getElementById('serviceRequestForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            
+            // Display the success message
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
     </script>
 </body>
 </html>
