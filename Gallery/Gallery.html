@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="gallery.css"> 
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 
@@ -18,6 +19,7 @@
         <div class="logo">
             <img src="../assests/Solar-Thirst-Logo.png" alt="Company Logo"> 
         </div>
+        <i class='bx bx-menu' id="menu-icon"></i> 
         <nav>
             <ul class="nav-menu">
                 <li><a href="../Home_page/home page.html">Home</a></li>
@@ -27,8 +29,8 @@
                 <li><a href="../Calculator_page/caculator.html">Calculator</a></li> 
                 <li><a href="../Faq_page/FAQ.html">FAQ</a></li>
                 <li><a href="../gallery/gallery.html">projects</a></li>
-                <li><a href="../Register_page/register_page.html" class="sign_btn">Customer</a></li>
-                <li><a href="../ad_login/ad_login.html" class="sign_btn">admin</a></li>
+                <li><a href="../Register_page/register_page.html" class="sign_btn"  id="sign_icon">Customer</a></li>
+                <li><a href="../ad_login/ad_login.html" class="sign_btn"  id="sign_icon">admin</a></li>
             </ul>
         </nav>
     </div>
@@ -105,6 +107,34 @@
                 input.value = ''; // Clear input
             }
         }
+
+        let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.nav-menu');
+let navLinks = document.querySelectorAll('.nav-menu a ');
+
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+          
+            document.querySelector(`header nav a[href*='${id}']`).classList.add('active');
+        }
+    });
+};
+
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x'); 
+    navbar.classList.toggle('active');
+};
     </script>
 <footer>
     <div class="footer-container">

@@ -58,6 +58,6 @@ elseif (isset($_POST['step_id']) && isset($_POST['description'])) {
 
     $stmt->close();
 }
-
+}
 $conn->close();
 ?>
